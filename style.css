@@ -160,27 +160,41 @@ section {
   display: flex;
 }
 
-/* PROFILE SECTION */
-
 #profile {
   display: flex;
   justify-content: center;
   gap: 5rem;
   height: 80vh;
+  flex-direction: column;
+  text-align: center;
 }
 
 .section__pic-container {
   display: flex;
-  height: 400px;
-  width: 400px;
-  margin: auto 0;
+  margin: auto;
+  max-width: 100%;
 }
 
 .profile-pic {
-  height: 400px;
-  width: 400px;
-  border-radius: 50%; /* Torna a imagem redonda */
-  object-fit: cover; /* Garante que a imagem preencha o container sem distorção */
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  #profile {
+    height: auto;
+  }
+
+  .section__pic-container {
+    margin-bottom: 2rem;
+  }
+
+  .profile-pic {
+    max-width: 200px;
+  }
 }
 
 .section__text {
